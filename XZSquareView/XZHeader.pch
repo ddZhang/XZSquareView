@@ -1,0 +1,18 @@
+//
+//  XZHeader.pch
+//  XZSquareView
+//
+//  Created by yq on 2017/11/29.
+//  Copyright © 2017年 XZ. All rights reserved.
+//
+
+#ifndef XZHeader_pch
+#define XZHeader_pch
+
+#import "XZHeader.pch"
+#import "UIView+XZ.h"
+
+#define KScreenW  [UIScreen mainScreen].bounds.size.width
+#define KScreenH  [UIScreen mainScreen].bounds.size.height
+
+#endif /* XZHeader_pch */
