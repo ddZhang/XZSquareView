@@ -16,13 +16,14 @@ XZSquareView *view = [[XZSquareView alloc] initWithFrame:CGRectMake(0, 20, self.
 
 //单元格高度
 - (CGFloat)heightOfItemInSquareView:(XZSquareView *)squareView;
+//列数
+- (NSInteger)numberOfColsInSquareView:(XZSquareView *)squareView;
+//单元格总数
+- (NSInteger)totalNumberOfSquareView:(XZSquareView *)squareView;
 //传入自定义单元格
 - (UIView *)itemOfSquareView:(XZSquareView *)squareView andRow:(NSInteger)row;
-
-- (NSInteger)numberOfColsInSquareView:(XZSquareView *)squareView;
-
-- (NSInteger)totalNumberOfSquareView:(XZSquareView *)squareView;
-
+@optional
+//单元格选中事件
 - (void)itemClickedInSquareView:(XZSquareView *)squareView withIndex:(NSInteger)index;
 
 ```
