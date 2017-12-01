@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
 
-    XZSquareView *view = [[XZSquareView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 300)];
+    XZSquareView *view = [[XZSquareView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 300 + 4)]; //价格间距高度
     view.delegate = self;
     [self.view addSubview:view];
 }
