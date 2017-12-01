@@ -60,6 +60,7 @@ static NSString *const XZCellID = @"XZCellID";
             }
         }
         UIView *view = [_delegate itemOfSquareView:self andRow:indexPath.row];
+        view.frame = cell.contentView.bounds;
         view.centerX = cell.width / 2;
         view.centerY = cell.height / 2;
         view.tag = indexPath.row;

@@ -38,7 +38,7 @@
 
 - (UIView *)itemOfSquareView:(XZSquareView *)squareView andRow:(NSInteger)row {
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width / 3, 100)];
+    UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor yellowColor];
     return view;
 }

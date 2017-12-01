@@ -8,6 +8,8 @@
 
 #import "SquareViewLayout.h"
 
+//  cell间距
+static CGFloat space = 2.f;
 @implementation SquareViewLayout
 
 - (NSInteger)col
@@ -62,10 +64,10 @@
     if (self.col <= 0) {
         return attr;
     }
-    CGFloat itemWidth = KScreenW/self.col;
+    CGFloat itemWidth = (KScreenW-(self.col-1)*space)/self.col;
     CGFloat itemHeight = self.height;
-    CGFloat centerX = itemWidth * 0.5 + indexPath.row % self.col * itemWidth;
-    CGFloat centerY = itemHeight * 0.5 + indexPath.row / self.col * itemHeight;
+    CGFloat centerX = itemWidth * 0.5 + indexPath.row % self.col * itemWidth + space*(indexPath.row % self.col);
+    CGFloat centerY = itemHeight * 0.5 + indexPath.row / self.col * itemHeight + space*(indexPath.row / self.col);
     attr.center = CGPointMake(centerX, centerY);
     attr.size = CGSizeMake(itemWidth, itemHeight);
     attr.indexPath = indexPath;
